@@ -3,9 +3,69 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="@drawable/image_bg">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/titleText"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:padding="28dp"
+        android:text="Mood Scanner!"
+        android:textColor="#FABFAB"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textExplain"
+        android:textSize="15dp"
+        android:textColor="#ffff"
+        android:layout_below="@+id/titleText"
+        android:layout_centerHorizontal="true"
+        android:text="@string/text_explain"/>
+
+    <ImageView
+        android:id="@+id/backgroundScanner"
+        android:src="@drawable/finger_bg"
+        android:layout_marginTop="4dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textExplain"
+        android:layout_width="200dp"
+        android:layout_height="304dp" />
+
+    <ImageView
+        android:src="@drawable/thumb_finger_prints"
+        android:layout_width="200dp"
+        android:layout_height="304dp"
+        android:id="@+id/thumbPrint"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textExplain"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#beff"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        android:layout_marginTop="6dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/thumbPrint"
+        android:id="@+id/resultTitle"
+        android:text="Your Mood: "/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resultText"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        android:textColor="#bbFF1521"
+        android:text="Hello"
+        android:layout_below="@+id/resultTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"/>
 
 </RelativeLayout>
